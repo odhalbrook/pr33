@@ -1,0 +1,45 @@
+import java.util.*;
+import java.io.*;
+
+class Problem
+{
+   public static void main (String[] args) throws IOException
+   {
+         //create a new Scanner connected to the data file - file.dat
+      Scanner file = new Scanner( new File( "pr33.dat" ) );
+
+         //read in the 1st number in the file
+      int times = file.nextInt();      
+      file.nextLine();
+
+         //loop runs to read in all data sets from the file
+      for( int zz = 0; zz < times; zz++ )
+      {
+        
+         int num = file.nextInt();
+         String l = file.next();
+        String [][] box = new String[num][num];
+            //read in stuff
+         for(int r = 0; r < num; r++)
+         {
+           for(int c = 0; c < num; c ++)
+           {
+             box[r][c] = l;
+           }
+         }
+
+            //print something
+            for(int pr = 0; pr < num; pr++)
+         {
+           for(int pc = 0; pc < num; pc++)
+           {
+         System.out.print( box [pr][pc] );
+           }
+           System.out.println();
+         }
+         
+      System.out.println();
+
+      }
+   }
+}
